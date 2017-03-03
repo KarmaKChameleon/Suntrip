@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suntrip </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	</head>
+<body>
+<style>
+
+  
+  
+    	body { margin:0; padding:0; }
+    	#mapid { position:fixed; margin:auto; right:0px; width:80%; height:100%;}
+</style>
+<Form action="start_dest.php" method=post>
+
+	Starting Point<br>
+	<input type="text" name="start"><br>
+	Destination<br>
+	<input type="text" name="destination"><br><br>
+	<input type="submit" value="Calculate my Trip">
+</form>
+<div id="mapid"</div>
+<script>
+
+	var mymap = L.map('mapid').setView([43.45, -80.53], 10);
+
+	L.tileLayer("http://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
+	}).addTo(mymap);
+	
+	
+ </script>
+
+</body>
+
+
+
+
+</html>
